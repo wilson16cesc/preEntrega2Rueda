@@ -4,25 +4,21 @@ import classNames from 'classnames';
 
 import jarra from '../../img/jarra1.png';
 
-const ItemListContainer = ()=>{
+const ItemListContainer = ({mensajeClick})=>{
 
-    const [isTraslate, setIsTraslate] = useState(false);
+  
 
     const cerrarCarrito = () => {
-        setIsTraslate(!isTraslate);
+        mensajeClick(true);
        
     }
-
-    const classesCarrito = classNames('fixed top-0 right-0 w-80 h-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out', {
-        'translate-x-full': isTraslate,
-      });
 
     return(
 
         <div class="flex justify-end">
+            
 
-
-            <div className={classesCarrito}>
+            <div class="fixed top-0 right-0 w-80 h-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out">
             <div class="p-4 border-b">
                 <h2 class="text-xl font-bold">Carrito de Compras</h2>
                 <button class="text-red-500 hover:text-red-700 float-right" onClick={cerrarCarrito}>✖️</button>

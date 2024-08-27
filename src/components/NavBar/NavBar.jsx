@@ -1,8 +1,16 @@
+import React, { useState } from 'react';
 import logo from '../../img/cosas.png';
 import CardWidget from './CardWidget';
 import ItemListContainer from './ItemListContainer';
+import classNames from 'classnames';
 
 const NavBar = () =>{
+
+  const [clickCarrito, setclickCarrito] = useState(true);
+
+  const classesCarrito = classNames('', {
+    'hidden': clickCarrito,
+  });
 
     return(
       <div> 
@@ -20,12 +28,17 @@ const NavBar = () =>{
                       <a href="#" class="text-white ">Papelieria</a>
                 </div>
                 <div>
-                    <CardWidget/>
+                    <CardWidget ActualizarClick={setclickCarrito}/>
+                    
                 </div>
               </div>  
           </div>
        </nav>
-       <ItemListContainer/>
+       <div className={classesCarrito}>
+          <p>ddddddddrfevdvrvrfrvevrvrfvr</p>
+          <ItemListContainer mensajeClick={setclickCarrito} />
+       </div>
+       
      </div>
     
     )
