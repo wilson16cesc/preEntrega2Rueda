@@ -4,13 +4,10 @@ import { faBell, faCartShopping } from '@fortawesome/free-solid-svg-icons'
 const CardWidget = ()=>{
 
     return(
-    <div class="text-white border py-2.5 px-5 rounded-md hover:bg-white hover:text-gray-800">
-        Tus Compras {" "}  
-        <FontAwesomeIcon icon={faBell} />{" "}
-        <i>2</i>
-
-        
-    </div>
+   
+        <button class="fixed top-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-full">
+            🛒 Ver Carrito
+        </button>
     )
 }
 
