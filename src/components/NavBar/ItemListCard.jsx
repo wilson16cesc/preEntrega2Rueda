@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import jarra from '../../img/jarra1.png';
 
-const ItemListContainer = ({mensajeClick})=>{
+const ItemListCard = ({mensajeClick})=>{
 
   
 
@@ -73,4 +73,4 @@ const ItemListContainer = ({mensajeClick})=>{
     )
 }
 
-export default ItemListContainer;
+export default ItemListCard;

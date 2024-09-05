@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../../img/cosas.png';
 import CardWidget from './CardWidget';
-import ItemListContainer from './ItemListContainer';
+import ItemListCard from './ItemListCard';
 import classNames from 'classnames';
 
 const NavBar = () =>{
@@ -36,8 +36,10 @@ const NavBar = () =>{
        </nav>
        <div className={classesCarrito}>
           <p>ddddddddrfevdvrvrfrvevrvrfvr</p>
-          <ItemListContainer mensajeClick={setclickCarrito} />
+          <ItemListCard mensajeClick={setclickCarrito} />
        </div>
+
+       
        
      </div>
     
